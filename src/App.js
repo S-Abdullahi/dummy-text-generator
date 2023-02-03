@@ -24,9 +24,9 @@ export default function App() {
         <input type="number" className="input" onChange={handleChange} />
         <button onClick={() => generateParagraph()}>Generate</button>
       </div>
-      {paragraph.map((item) => {
+      {paragraph.map((item, index) => {
         return (
-          <div className="paragraph">
+          <div className="paragraph" key={index}>
             <p>{item}</p>
           </div>
         );
